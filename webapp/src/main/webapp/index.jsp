@@ -1,55 +1,82 @@
-<!DOCTYPE HTML>
-<!-- This is how HTML comments look like -->
 <html>
-<!-- the title will appear on the page-->
-<head>
-<title>Employee Interests Survey</title>
-</head>
-<body>
-<!-- as it is a survey form, we will need to submit the details, hence we use form -->
-<!-- We can give absolute url, or relative url like /nextpage.jsp, and specify POST or GET method -->
-<form action="http://google.co.in">
-<!-- If we remove this, every thing will move to the left of the page-->
-<div align="center">
-<!--Adds a heading to the form-->
-<h1>Employee Interests Survey form</h1>
-Enter your name:
-<!-- Input type text for small texts, specify size -->
-<input type="text" name="UserName" size=35 maxlength=35 value="">
-<!--Adds spaces - remove and see what happens -->
-</br></br>
-Enter your department:
-<input type="text" name="Deptt" size=35 maxlength=35 value=""> </br> </br>
-Tell us a little about yourself:
-<!-- For writing lot of text like descriptions with text wrapping,
-if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
-<textarea name="Comments" cols=30 rows=4></textarea> </br> </br>
-Do you exercise at home?
-<!-- Radio buttons help you choose one out of the many values -->
-<input type="radio" name="exe" value=1>Yes
-<input type="radio" name="exe" value=2>No
-</p>
-How do you like to read about your favorite topics?
-<p>
-<!--Checkbox lets you select multiple options -->
-<input type="checkbox" name="Books">Books
-<input type="checkbox" name="Web">Online resources
-<input type="checkbox" name="Phone">Phone apps
-<input type="checkbox" name="Magazines">Magazines
-</p>
-What genre of movies do you like?
-<!--Select box lets you choose one of the multiple dropdown options-->
-<select name="moviepref" ><option>
-<option value=1 selected = "true">comedy
-<option value=2 >romance
-<option value=3 >thriller
-<option value=4 >horror
-<option value=5 >biopic
-</select>
-</br></br>
-<!--submits the information entered in the form by the user -->
-<input type=submit value="Submit form">
+<!--This example uses the default bootstrap stylesheet-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--provides a full-width container that can expand or collapse based on the size of viewport-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-sm-12 col-xs-12">
+            <nav id="navbar">
+                <h3>Technical Documentation</h3>
+                <!--content stacking for smaller screens-->
+                <ul class="nav nav-pills nav-stacked">
+                 <!--internal linking to the respective sections-->
+                    <a class="nav-link" href="#Introduction" rel="internal">
+                        <li>Introduction</li>
+                    </a>
+                    <a class="nav-link" href="#What_you_should_already_know" rel="internal">
+                        <li>What you should already know</li>
+                    </a>
+                    <a class="nav-link" href="#About_Topic" rel="internal">
+                        <li>About the topic</li>
+                    </a>
+                    <a class="nav-link" href="#Topic_1" rel="internal">
+                        <li>Topic 1</li>
+                    </a>
+                    <a class="nav-link" href="#Topic_2" rel="internal">
+                        <li>Topic 2</li>
+                    </a>
+                 </ul>
+            </nav>
+        </div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+            <main id="main-doc">
+                <section class="main-section" id="Introduction" >
+                 <!--basic styling for the headings, better practice to do the same in a css file as the styling is same for all headers-->
+                    <h3 style = "background: black; color: white">Introduction</h3>
+                    <article>
+                    <p>Some content about the main topic, for example Java documentation introduction about the language
+                        </article>
+                </section>
+                <section class="main-section" id="What_you_should_already_know">
+                    <h3 style = "background: black; color: white">What you should already know</h3>
+                    <article>
+                        <p>Background information before getting into the topic:</p>
+<!--creating list using html-->
+                        <li>Some list content</li>
+                        <li>Prerequisites.</li>
+                        <li>Workings and assumptions</li>
+                        <p>Any other content to be covered before learning this topic</p>
+                        </artice>
+                </section>
+                <section class="main-section" id="About_Topic">
+                    <h3 style = "background: black; color: white">About topic</h3>
+                    <article>
+                        <p>More lines about the topic. For example, how the basic functionality works, features etc...</p>
+                        <p>
+                        Technical documentation should be thorough and to the point
+                        </p>
+                        <p>
+                        Write about features, comparisons with other languages etc
+                        </p>
+                    </article>
+                </section>
+                <section class="main-section" id="Topic_1">
+                    <h3 style = "background: black; color: white">Topic 1</h3>
+                    <article>
+                        Getting started with the actual documentation content
+                        <code>This would come in a different color and font indicating lines of code
+                        </code>
+                    </article>
+                </section>
+                <section class="main-section" id="Topic_2">
+                    <h3 style = "background: black; color: white">Topic 2</h3>
+                    <p>
+Another topic about the main topic, for example, if the topic is Java, this could be variables or data types in Java
+                    </p>
+                </section>
+            </main>
+        </div>
+    </div>
 </div>
-</form>
-</body>
 </html>
